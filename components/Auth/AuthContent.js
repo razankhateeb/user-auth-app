@@ -17,9 +17,11 @@ function AuthContent({ isLogin, onAuthenticate }) {
   });
 
   function switchAuthModeHandler() {
-    // if (isLogin) {
-    //   navigation.navigate();
-    // }
+    if (isLogin) {
+      navigation.replace("Signup");
+    } else {
+      navigation.replace("Login");
+    }
   }
 
   function submitHandler(credentials) {
